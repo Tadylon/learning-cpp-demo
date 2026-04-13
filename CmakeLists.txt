@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(Main CXX)
+
+add_executable(Main STL/vector/vector.cpp)
+
