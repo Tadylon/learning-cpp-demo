@@ -1,29 +1,53 @@
 #include <iostream>
-#include <string>
 using namespace std;
-
+#include <cstring>
+#include <cstdlib>
 
 class Buffer {
 public:
-    int* data;
-    Buffer(int value) {
-        data = new int(value);
+    char * data;
+    int size;
+
+    //this is constructor
+    Buffer(const char *value) {
+        size = strlen(value) + 1;
+        data = new char[size];
+        //copy size
+        memcpy(data, value, size); // 真正把 "hello" 拷进去
     }
 
-    // 手动实现深拷贝构造函数
+    // deepcopy constructor
     Buffer(const Buffer& other) {
         // 1. 申请新的内存
-        data = new int; 
-        // 2. 复制实际的值
-        *data = *(other.data); 
-    }
+        size = other.size;
+        data = new char[size]; 
+        for (int i = 0; i < size; i++) {
+            data[i] = other.data[i];
+        }
 
+    }
+    //this is destructor function
     ~Buffer() {
-        delete data; // 释放内存
+        delete[] data; // 释放内存
     }
 };
 
-int main(){
+void buildClass(){
+    const char * test = "hello";
 
+    Buffer b(test);
+    //print
+    cout << "this is b : " << b.data << "  " <<  b.size << endl;
+    Buffer c = b;
+
+    //print
+    cout << "this is c : " << c.data << "  " <<  c.size << endl;
+}
+
+int main(){
+    buildClass();
+
+    system("pause");
+    
     return 0;
 }
