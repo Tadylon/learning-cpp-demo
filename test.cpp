@@ -24,6 +24,17 @@ public:
 	int m_Salary;
 };
 
+// //声明一下
+
+// void printMap(map<int,int>&m)
+// {
+// 	for (map<int, int>::iterator it = m.begin(); it != m.end(); it++)
+// 	{
+// 		cout << "key = " << it->first << " value = " << it->second << endl;
+// 	}
+// 	cout << endl;
+// }
+
 void createWorker(vector<Worker>&v)
 {
 	string nameSeed = "ABCDEFGHIJ";
