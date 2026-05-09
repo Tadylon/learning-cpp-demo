@@ -2,5 +2,5 @@ cmake_minimum_required(VERSION 3.10)
 
 project(Main CXX)
 
-add_executable(Main function_point.cpp)
+add_executable(Main class/singleton.cpp)
 
