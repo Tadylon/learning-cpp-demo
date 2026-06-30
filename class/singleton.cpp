@@ -19,6 +19,8 @@ public:
     Singleton& operator=(const Singleton&) = delete;
 };
 
+// 定义（分配内存空间，告诉链接器这个变量的地址）
+// 这不是"访问"，而是"提供实现"
 Singleton* Singleton::instance = nullptr;
 
 class MathUtils {
@@ -48,6 +50,6 @@ int main(){
     Singleton* s1 = Singleton::getInstance();
     Singleton* s2 = Singleton::getInstance();
     std::cout << "Same instance: " << (s1 == s2) << std::endl;
-    
+
     return 0;
 }

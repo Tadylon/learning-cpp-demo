@@ -30,7 +30,7 @@ public:
         count++; // 统计使用次数
     }
 
-    int count; // 内部自己的状态
+    static int count; // 内部自己的状态
 };
 void test02()
 {
