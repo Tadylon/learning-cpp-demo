@@ -36,8 +36,10 @@ void buildClass(){
     const char * test = "hello";
 
     Buffer b(test);
+    Buffer* x = new Buffer(b);
     //print
     cout << "this is b : " << b.data << "  " <<  b.size << endl;
+    cout << "this is a : " << x->data << "  " <<  x->size << endl;
     Buffer c = b;
 
     //print

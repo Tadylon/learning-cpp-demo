@@ -5,7 +5,7 @@ private:
     Singleton() {
         
     }                    // 私有构造函数
-    static Singleton* instance;
+    static inline Singleton* instance = nullptr;
     
 public:
     static Singleton* getInstance() {
@@ -15,20 +15,20 @@ public:
         return instance;
     }
     
-    Singleton(const Singleton&) = delete;     // 禁止拷贝
-    Singleton& operator=(const Singleton&) = delete;
+    Singleton(const Singleton&) = delete;     // 禁止拷贝构造函数
+    Singleton& operator=(const Singleton&) = delete;  //ban reference 构造赋值
 };
 
 // 定义（分配内存空间，告诉链接器这个变量的地址）
 // 这不是"访问"，而是"提供实现"
-Singleton* Singleton::instance = nullptr;
+// Singleton* Singleton::instance = nullptr;
 
 class MathUtils {
-    private:
+private:
     MathUtils() = delete;    // 禁止创建对象
     // 或设为私有：MathUtils() {}
     
-    public:
+public:
     static double pi() { return 3.14159; }
     static int add(int a, int b) { return a + b; }
     static int square(int x) { return x * x; }

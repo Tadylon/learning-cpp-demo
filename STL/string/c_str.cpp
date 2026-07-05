@@ -20,7 +20,8 @@ int main()
     printf("使用 printf: %s\n", cstr);
 
     // 3. 获取字符串长度
-    std::cout << "字符串长度: " << strlen(str.c_str()) << std::endl;
+    std::cout << "字符串长度: " << sizeof(str) << std::endl;
+    std::cout << "字符串长度: " << strlen(cstr) << std::endl;
 
     // 4. 用于文件操作
     std::string filename = "test.txt";

@@ -2,5 +2,5 @@ cmake_minimum_required(VERSION 3.20)
 
 project(Main CXX)
 
-add_executable(Main STL/string/c_str.cpp)
+add_executable(Main class/singleton.cpp)
 

@@ -75,7 +75,7 @@ int main() {
     animalPtr = new Dog();
     animalPtr->sound();  // 调用 Dog 的 sound 方法
     delete animalPtr;    // 释放内存，调用 Dog 和 Animal 的析构函数
-
+    animalPtr = nullptr;
     // 创建 Cat 对象，并指向 Animal 指针
     animalPtr = new Cat();
     animalPtr->sound();  // 调用 Cat 的 sound 方法
