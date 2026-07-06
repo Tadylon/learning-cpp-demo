@@ -2,7 +2,20 @@
 #include <string>
 #include <array>
 
-void func(int arr_param[10]) { 
+void func(int arr_param[10]) {
+    //这里括号内可以写也可以不写任何东西，因为最终会被compiler给忽视掉
+
+
+//     // 写法 1：使用指针语法（最本质的写法）
+// void printArray1(int* arr, int size) { ... }
+
+// // 写法 2：使用空方括号（最常见的写法，可读性好）
+// void printArray2(int arr[], int size) { ... }
+
+// // 写法 3：带大小的方括号（注意：里面的数字会被编译器直接忽略！写 100 也没用）
+// void printArray3(int arr[5], int size) { ... }
+
+
     // 在这里，arr_param 的类型不再是 int[10]，而是 int* ！！！
     // sizeof(arr_param) = 8（指针的大小），而不是 40
 }

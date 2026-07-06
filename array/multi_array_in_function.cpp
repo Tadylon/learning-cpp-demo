@@ -2,6 +2,22 @@
 #include <string>
 
 
+
+// 第二个括号内的数字必须都给写上，否则会报错
+
+// 写法 1：方括号留空第一维，必须写明第二维（最常用）
+// void printMatrix1(int arr[][3], int rows) { ... }
+
+// 写法 2：明确写出第一维的大小（里面的 2 依然会被编译器忽略）
+// void printMatrix2(int arr[2][3], int rows) { ... }
+
+// 写法 3：本质的指针语法 —— 数组指针（注意括号不能少！）
+// void printMatrix3(int (*arr)[3], int rows) { ... }
+
+// 这里必须要限制大小吗？
+// Anwser : 如果下面使用了这个 sizeof(arr) 就会报错，如果不使用就不会报错，这个时候使用应该没有任何问题
+// void processRefMatrix(int (&arr)[2][3]) {}
+
 // 1. 声明但不初始化（里面的值是内存垃圾）
 int arr1[3][4]; // 3行4列的二维数组
 
