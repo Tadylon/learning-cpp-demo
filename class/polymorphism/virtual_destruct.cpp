@@ -16,7 +16,6 @@ public:
 	//	cout << "Animal虚析构函数调用！" << endl;
 	//}
 
-
 	virtual ~Animal() = 0;
 };
 

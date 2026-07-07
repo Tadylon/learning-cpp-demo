@@ -5,6 +5,5 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(Main
-    # array/multi_array.cpp
-    function_oop/function_lambda.cpp
+    type_cast/type_punning.cpp
     )
