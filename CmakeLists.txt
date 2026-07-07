@@ -5,5 +5,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(Main
-    type_cast/type_punning.cpp
+    # type_cast/type_static_cast.cpp
+    type_cast/network_data_alignment.cpp
+    # performance/timer_test.cpp
     )

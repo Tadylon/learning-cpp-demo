@@ -5,6 +5,7 @@
 union FloatBits {
     float f;
     uint32_t bits; // 无符号整数，与 float 大小相同
+    // double alignment = 10.4;
 };
 
 void inspect_float(float value) {
