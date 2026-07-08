@@ -10,6 +10,18 @@ union Data {
     char c;     // 1 字节
 };
 
+union UnionTest {
+    UnionTest() : union_i(10) {};
+    int union_i;
+    double union_d;
+};
+
+static union {
+    int static_i;
+    double static_d;
+};
+
+
 int main() {
     Data data ;
     std::cout << "the size of union data : " << sizeof(data) << " bytes " << std::endl; // 通常输出 8 (对齐到 double)

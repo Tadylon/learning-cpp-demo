@@ -5,7 +5,10 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(Main
-    # type_cast/type_static_cast.cpp
-    type_cast/network_data_alignment.cpp
-    # performance/timer_test.cpp
+    # struct/explicit_test.cpp
+    # class/enum_class.cpp
+    # key_words/base_decltype.cpp
+    # STL/Container/container/initializer_list.cpp
+    # STL/Memory/cast_point.cpp
+    class/rtti.cpp
     )
