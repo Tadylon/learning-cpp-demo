@@ -5,11 +5,11 @@ set(CMAKE_CXX_STANDARD 26)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(Main
-    # struct/explicit_test.cpp
-    # class/enum_class.cpp
-    # key_words/base_decltype.cpp
-    # STL/Container/container/initializer_list.cpp
-    # STL/Memory/cast_point.cpp
-    # class/rtti.cpp
-    async/async/future.cpp
+    async/async_pro/template_async_future.cpp
+    # async/course/no_blockage.cpp
+    # async/course/delay_task.cpp
+    # async/course/share_task_result.cpp
+    # async/course/delay_task_demo.cpp
+    # async/thread/thread_join.cpp
+    # async/thread/thread_mutex.cpp
     )

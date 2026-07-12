@@ -17,8 +17,11 @@ int main(){
     std::cin.get();
     is_Finished = true;
     std::cout << "the value of is_FInished : " << is_Finished << std::endl;
-
-    worker.join();
+    //这个是等待完成 阻塞
+    if (worker.joinable()) {
+        worker.join();
+        std::cout << " this thread has finished ! \n"; 
+    }
 
     system("pause");
     return 0;

@@ -24,10 +24,11 @@ int main(int argc, char const *argv[])
     
     Calculator calc;
     
-    std::future<int> classFut = std::async(std::launch::async,
-                                        &Calculator::heavyComputer,
-                                        &calc,
-                                        10);
+    std::future<int> classFut = std::async(
+        std::launch::async,
+        &Calculator::heavyComputer,
+        &calc,
+        10);
 
     int result = fut.get();
     int class_result = classFut.get();
