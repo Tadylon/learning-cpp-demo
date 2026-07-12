@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.20)
 
 project(Main CXX)
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 26)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(Main
@@ -10,5 +10,6 @@ add_executable(Main
     # key_words/base_decltype.cpp
     # STL/Container/container/initializer_list.cpp
     # STL/Memory/cast_point.cpp
-    class/rtti.cpp
+    # class/rtti.cpp
+    async/async/future.cpp
     )
