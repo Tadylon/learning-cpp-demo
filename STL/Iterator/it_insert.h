@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <vector>
 #include <list>
@@ -15,12 +16,12 @@ template<typename Container>
 void PrintContainer(const Container& container) {
     std::cout << "the elements of this container is : ";
     for (const auto& el : container) {
-        std::cout << el;
+        std::cout << el << " ";
     }
     std::cout << std::endl;
 }
 
-
+#if 0
 int main()
 {
     std::vector<int> vec = {1, 2, 3};
@@ -48,3 +49,5 @@ int main()
     std::copy(vec.begin(), vec.end(), std::inserter(lst, pos));
     return 0;
 }
+
+#endif
