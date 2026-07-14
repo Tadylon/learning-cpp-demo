@@ -10,9 +10,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(Main
     async/chrono/standard_time.h
     STL/Iterator/it_insert.h
-    # STL/Utility/move_synax/l_rvalue.cpp
-    # STL/Utility/move_synax/template_move_synatx.cpp
-    # STL/Utility/move_synax/ptr_reference.cpp
+    # STL/Utility/move_syntax/l_rvalue.cpp
+    # STL/Utility/move_syntax/template_move_syntax.cpp
+    # STL/Utility/move_syntax/ptr_reference.cpp
     # STL/Iterator/input_iterator.cpp
     # STL/Iterator/output_iterator.cpp
     # STL/Iterator/common.cpp
@@ -23,7 +23,8 @@ add_executable(Main
     # STL/Iterator/it_traverse.cpp
     # STL/Iterator/it_move.cpp
     # STL/Iterator/it_insert.cpp
-    STL/Utility/move_rvalue.cpp
+    # STL/Utility/move_rvalue.cpp
+    STL/Utility/unique_ptr_move.cpp
 )
 
 target_include_directories(Main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

@@ -23,6 +23,6 @@ cmake
 
 
 ## Learn Route
-after learning these base c++ synax , the next step is to learn data struct and algorithm .
+after learning these base c++ syntax , the next step is to learn data struct and algorithm .
 
 after learning this repo , you can choose to learn other library or to learn something about the algorithm !
