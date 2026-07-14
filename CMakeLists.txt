@@ -8,8 +8,8 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(Main
-    async/chrono/standard_time.h
-    STL/Iterator/it_insert.h
+    # async/chrono/standard_time.h
+    # STL/Iterator/it_insert.h
     # STL/Utility/move_syntax/l_rvalue.cpp
     # STL/Utility/move_syntax/template_move_syntax.cpp
     # STL/Utility/move_syntax/ptr_reference.cpp
@@ -24,9 +24,11 @@ add_executable(Main
     # STL/Iterator/it_move.cpp
     # STL/Iterator/it_insert.cpp
     # STL/Utility/move_rvalue.cpp
-    STL/Utility/unique_ptr_move.cpp
+    # STL/Utility/unique_ptr_move.cpp
+    # class/FiveRule.cpp
+    STL/String/string_view.cpp
 )
 
-target_include_directories(Main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(Main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 # 3. 明确告诉 CMake：这个目标(Target)需要编译并使用 C++23 的标准库模块
