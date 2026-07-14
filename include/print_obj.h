@@ -1,9 +1,8 @@
+#define _CRT_SECURE_NO_WARNINGS
 #pragma once
 #include <iostream>
-#include <vector>
-#include <list>
 #include <tuple>
-#include <string>
+
 
 template<typename T>
 void PrintIterator(T begin , T end) {
@@ -40,4 +39,10 @@ void print_tuple(const std::tuple<Args...>& t) {
 template<typename T>
 void print_all(const T& obj) {
     print_tuple(obj.tie());
+}
+
+
+template<typename T>
+void cout__(const T& info) {
+    std::cout << info <<std::endl; 
 }
