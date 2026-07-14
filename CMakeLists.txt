@@ -31,7 +31,11 @@ add_executable(Main
     # key_words/compare/using_typedef.cpp
     # key_words/compare_using_typedef/template_way.cpp
     # key_words/compare_using_typedef/using_local.cpp
-    STL/Utility/type_traits/integral_constant.cpp
+    # STL/Utility/type_traits/integral_constant.cpp
+    # STL/Utility/type_traits/sequence,.cpp
+    # STL/Utility/type_traits/judgment.cpp
+    # key_words/constexpr.cpp
+    key_words/cosnteval.cpp
 )
 
 target_include_directories(Main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)

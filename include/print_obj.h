@@ -44,5 +44,6 @@ void print_all(const T& obj) {
 
 template<typename T>
 void cout__(const T& info) {
+    std::cout << "info" << " :  "; 
     std::cout << info <<std::endl; 
 }

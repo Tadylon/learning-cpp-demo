@@ -1,0 +1,42 @@
+#pragma once
+#include <iostream>
+#include <type_traits>
+#include <cstring>
+
+// 前置声明（用于递归）
+template<typename T>
+void serialize(const T& obj, std::ostream& os);
+
+// 主调度函数：利用 if constexpr（C++17）在编译期消灭分支
+template<typename T>
+void serialize(const T& obj, std::ostream& os) {
+    if constexpr (std::is_arithmetic_v<T>) {
+        // 1. 如果是整数/浮点，直接按字节写入（零开销）
+        os.write(reinterpret_cast<const char*>(&obj), sizeof(T));
+    } 
+    else if constexpr (std::is_pointer_v<T>) {
+        // 2. 如果是指针：先存地址（用于调试），再解引用序列化内容
+        os << "Ptr Address: " << (void*)obj << " -> ";
+        if constexpr (std::is_arithmetic_v<std::remove_pointer_t<T>>) {
+            // 指向算术类型的指针，直接写值
+            os << *obj;
+        } else {
+            // 指向对象的指针，递归调用
+            serialize(*obj, os);
+        }
+    } 
+    else if constexpr (std::is_class_v<T>) {
+        // 3. 如果是类（假设有 tie 方法，结合你之前的提问），递归遍历成员
+        // obj.tie() 返回 tuple，逐字段递归调用 serialize
+        // ... 此处省略展开逻辑
+        os << "Class Object";
+    }
+}
+
+// 标准库在 C++20 中定义的内置 Concept：
+template<typename T>
+concept Integral = std::is_integral_v<T>; // 本质上还是调用了 Type Traits
+
+// 编译期判断类型是否可拷贝的 Concept：
+template<typename T>
+concept Copyable = std::is_copy_constructible_v<T> && std::is_copy_assignable_v<T>;
