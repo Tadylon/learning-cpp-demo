@@ -27,7 +27,11 @@ add_executable(Main
     # STL/Utility/unique_ptr_move.cpp
     # class/FiveRule.cpp
     # STL/String/string_view.cpp
-    STL/String/cstyle/string_kwords.cpp
+    # STL/String/cstyle/string_kwords.cpp
+    # key_words/compare/using_typedef.cpp
+    # key_words/compare_using_typedef/template_way.cpp
+    # key_words/compare_using_typedef/using_local.cpp
+    STL/Utility/type_traits/integral_constant.cpp
 )
 
 target_include_directories(Main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
