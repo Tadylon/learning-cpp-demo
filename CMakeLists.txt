@@ -27,7 +27,7 @@ add_executable(Main
     # STL/Utility/unique_ptr_move.cpp
     # class/FiveRule.cpp
     # STL/String/string_view.cpp
-    STL/String/cstring/string_kwords.cpp
+    STL/String/cstyle/string_kwords.cpp
 )
 
 target_include_directories(Main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)

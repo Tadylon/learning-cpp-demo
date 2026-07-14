@@ -41,8 +41,10 @@ int main()
     PrintContainer(arr3);
     // 复制整个数组：5 个 int，每个 int 4 字节，共 20 字节
     memcpy(arr2, arr1, sizeof(arr1));
-    memmove(arr3, arr1, sizeof(arr1));
     PrintContainer(arr2);
+    memmove(arr3, arr1, sizeof(arr1));
+    cout__("the contant of arr1 after move : ");
+    PrintContainer(arr1);
     PrintContainer(arr3);
     
     cout__("--------------------\n");
