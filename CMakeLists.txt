@@ -39,7 +39,9 @@ add_executable(Main
     # function_oop/parameter.cpp
     # STL/Utility/move_syntax/move_rvalue.cpp
     # STL/Utility/move_syntax/move_syntax.cpp
-    STL/stream/io_stream.cpp
+    # STL/stream/io_stream.cpp
+    # STL/stream/simple_io.cpp
+    STL/stream/get_serise.cpp
 )
 
 target_include_directories(Main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)

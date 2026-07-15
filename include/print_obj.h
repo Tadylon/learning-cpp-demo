@@ -50,5 +50,5 @@ void cout__(const T& info) {
 
 template<typename T>
 void cline__(const T& info) {
-    std::cout << info <<std::endl; 
+    std::cout << info << "\n"; 
 }
