@@ -1,7 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
-
+#include <limits>
 
 #include "print_obj.h"
 
@@ -35,7 +35,7 @@ int main() {
     int age; 
     std::string name;
     std::cin >> age;        // 输入"25\n"，换行符留在缓冲区
-    // std::cin.clear();
+    std::cin.clear();
     std::cin.ignore(1024,'\n');
     cout__(age);
     
