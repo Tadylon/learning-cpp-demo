@@ -7,41 +7,24 @@ project(Main CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(Main
-    # async/chrono/standard_time.h
-    # STL/Iterator/it_insert.h
-    # STL/Utility/move_syntax/l_rvalue.cpp
-    # STL/Utility/move_syntax/template_move_syntax.cpp
-    # STL/Utility/move_syntax/ptr_reference.cpp
-    # STL/Iterator/input_iterator.cpp
-    # STL/Iterator/output_iterator.cpp
-    # STL/Iterator/common.cpp
-    # STL/Iterator/forward_it.cpp
-    # STL/Iterator/bidirectional_it.cpp
-    # STL/Iterator/contigour_it.cpp
-    # STL/Iterator/it_declare.cpp
-    # STL/Iterator/it_traverse.cpp
-    # STL/Iterator/it_move.cpp
-    # STL/Iterator/it_insert.cpp
-    # STL/Utility/move_rvalue.cpp
-    # STL/Utility/unique_ptr_move.cpp
-    # class/FiveRule.cpp
-    # STL/String/string_view.cpp
-    # STL/String/cstyle/string_kwords.cpp
-    # key_words/compare/using_typedef.cpp
-    # key_words/compare_using_typedef/template_way.cpp
-    # key_words/compare_using_typedef/using_local.cpp
-    # STL/Utility/type_traits/integral_constant.cpp
-    # STL/Utility/type_traits/sequence,.cpp
-    # STL/Utility/type_traits/judgment.cpp
-    # key_words/constexpr.cpp
-    # key_words/cosnteval.cpp
-    # function_oop/parameter.cpp
-    # STL/Utility/move_syntax/move_rvalue.cpp
-    # STL/Utility/move_syntax/move_syntax.cpp
-    web/socket/serve.cpp
+add_executable(LearningCppDemo
+    # web/socket/cilent.cpp
+    # web/socket/clinet_pro.cpp
+    web/socket/functions/fsocket.cpp
 )
 
-target_include_directories(Main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+add_executable(cilent 
+    # web/socket/cilent.cpp
+    web/socket/clinet_pro.cpp
+)
+
+add_executable(server
+    web/socket/serve.cpp
+    # web/socket/server2.cpp
+)
+
+target_include_directories(LearningCppDemo PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories(cilent PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories(server PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 # 3. 明确告诉 CMake：这个目标(Target)需要编译并使用 C++23 的标准库模块

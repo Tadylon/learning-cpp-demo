@@ -64,7 +64,7 @@ int main()
         }
 
         char buf[1024] = {0};
-
+        cout__(buf);
         // 5. 接收客户端的数据
         size_t len = ::recv(connfd, buf, sizeof(buf), 0);
         printf("recv: conn=%d msg=%s\n", connfd, buf);
