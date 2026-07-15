@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <utility>
+
 #include "standard_time.h"
 #include "print_obj.h"
 
@@ -21,6 +22,11 @@ public:
             other.data = nullptr;    // 3. 源对象置空
         }
         return *this;
+    }
+
+    ~MyString() {
+        cout__("Destructor ! ");
+        delete[] data; 
     }
 };
 
@@ -57,6 +63,7 @@ int main() {
     vec.push_back(std::move(s));  // O(1) 移动，而非 O(n) 拷贝
     // 此时 s 为空，资源已转移
     PrintContainer(vec);
+    std::cin.get();
     return 0;
 }
 

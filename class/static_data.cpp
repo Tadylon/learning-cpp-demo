@@ -5,7 +5,7 @@ class Person
 	
 public:
 
-	static int m_A; //静态成员变量
+	inline static int m_A = 10; //静态成员变量
 
 	//静态成员变量特点：
 	//1 在编译阶段分配内存
@@ -13,10 +13,10 @@ public:
 	//3 所有对象共享同一份数据
 
 private:
-	static int m_B; //静态成员变量也是有访问权限的
+	inline static int m_B = 10; //静态成员变量也是有访问权限的
 };
-int Person::m_A = 10;
-int Person::m_B = 10;
+// int Person::m_A = 10;
+// int Person::m_B = 10;
 
 void test01()
 {

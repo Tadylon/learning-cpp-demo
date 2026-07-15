@@ -35,7 +35,10 @@ add_executable(Main
     # STL/Utility/type_traits/sequence,.cpp
     # STL/Utility/type_traits/judgment.cpp
     # key_words/constexpr.cpp
-    key_words/cosnteval.cpp
+    # key_words/cosnteval.cpp
+    # function_oop/parameter.cpp
+    # STL/Utility/move_syntax/move_rvalue.cpp
+    STL/Utility/move_syntax/move_syntax.cpp
 )
 
 target_include_directories(Main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)

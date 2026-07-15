@@ -23,11 +23,12 @@ class FiveRule
 };
 
 class GoodString {
-    char* data;
-    //最佳实践是直接使用标准库中的std::string
 public:
     // 构造 & 析构
-    GoodString(const char* str) : data(new char[strlen(str)+1]) { strcpy(data, str); }
+    GoodString(const char* str) : data(new char[strlen(str)+1]) { 
+        strcpy(data, str); 
+    }
+    
     ~GoodString() { delete[] data; }
 
     // 拷贝构造（深拷贝）
@@ -57,4 +58,8 @@ public:
         }
         return *this;
     }
+
+private:
+    char* data;
+    //最佳实践是直接使用标准库中的std::string
 };

@@ -1,5 +1,5 @@
 #include <iostream>
-// #include <string>
+#include <string>
 
 using MYFUNC = int (*)(int widht ,int height);
 
