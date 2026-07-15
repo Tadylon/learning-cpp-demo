@@ -47,3 +47,8 @@ void cout__(const T& info) {
     std::cout << "info" << " :  "; 
     std::cout << info <<std::endl; 
 }
+
+template<typename T>
+void cline__(const T& info) {
+    std::cout << info <<std::endl; 
+}

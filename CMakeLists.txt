@@ -38,7 +38,8 @@ add_executable(Main
     # key_words/cosnteval.cpp
     # function_oop/parameter.cpp
     # STL/Utility/move_syntax/move_rvalue.cpp
-    STL/Utility/move_syntax/move_syntax.cpp
+    # STL/Utility/move_syntax/move_syntax.cpp
+    STL/stream/io_stream.cpp
 )
 
 target_include_directories(Main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
