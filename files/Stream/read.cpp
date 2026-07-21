@@ -1,16 +1,16 @@
 #include <iostream>
-using namespace std;
 #include <fstream>
-
 #include <string>
+
+// using namespace std;
 void test01()
 {
-	ifstream ifs;
-	ifs.open("test.txt", ios::in);
+	std::ifstream ifs;
+	ifs.open("test.txt", std::ios::in);
 
 	if (!ifs.is_open())
 	{
-		cout << "文件打开失败" << endl;
+		std::cout << "Open error ! " << std::endl;
 		return;
 	}
 
@@ -34,23 +34,18 @@ void test01()
 	//{
 	//	cout << buf << endl;
 	//}
-
+    
 	char c;
 	while ((c = ifs.get()) != EOF)
 	{
-		cout << c;
+		std::cout << c;
 	}
-
 	ifs.close();
-
-
 }
 
 int main() {
 
 	test01();
-
 	system("pause");
-
 	return 0;
 }

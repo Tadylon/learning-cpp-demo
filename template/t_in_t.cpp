@@ -28,6 +28,12 @@ public:
     Container<T>& getContainer() {
         return c;
     }
+    void PrintContainer() {
+        for (auto i : this->c) {
+            std::cout << i << " ";
+        }
+        std::cout << "\n";
+    }
 };
 
 int main()
@@ -40,6 +46,7 @@ int main()
         std::cout << i << " ";
     }
     std::cout << "\n";
+    w.PrintContainer();
     std::cin.get();
     return 0;
 }

@@ -32,7 +32,14 @@ add_executable(Main
     # template/template_in_class.cpp
     # template/variable_name.cpp
     # template/allocator_t.cpp
-    template/t_in_t.cpp
+    # template/t_in_t.cpp
+    # STL/stream/compare/diff_getline.cpp
+    # STL/stream/compare/diff_get.cpp
+    # files/Stream/write.cpp
+    # files/Stream/file_open_text.cpp
+    # files/Stream/read_stream.cpp
+    # files/iomanip/print_map.cpp
+    files/stringstream/ostringstream.cpp
 )
 
 target_include_directories(Main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
