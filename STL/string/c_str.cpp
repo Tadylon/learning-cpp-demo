@@ -16,18 +16,25 @@ int main()
     const char* cstr = str.c_str();
 
     // 2. 用于 C 标准库函数
-    printf("使用 printf: %s\n", str.c_str());
-    printf("使用 printf: %s\n", cstr);
+    printf("using printf: %s\n", str.c_str());
+    printf("using printf: %s\n", cstr);
 
     // 3. 获取字符串长度
-    std::cout << "字符串长度: " << sizeof(str) << std::endl;
-    std::cout << "字符串长度: " << strlen(cstr) << std::endl;
+    std::cout << "the length of string : " << sizeof(str) << std::endl;
+    std::cout << "the length of string : " << strlen(cstr) << std::endl;
 
     // 4. 用于文件操作
-    std::string filename = "test.txt";
-    FILE* file = fopen(filename.c_str(), "r");
+    std::string filename = "a.txt";
+    // FILE* file = fopen((char*)filename, "r");
+    FILE* file = fopen(filename.data(), "r+");
     if (file) {
         // 文件操作
+        std::cout << file << "\n";
+        char buffer[256];
+        while (fgets(buffer, sizeof(buffer), file) != NULL) {
+            std::cout << buffer;   // fgets 保留换行符，所以不用加 endl
+        }
+
         fclose(file);
     }
 

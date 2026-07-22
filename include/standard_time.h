@@ -13,6 +13,11 @@ public:
     explicit Timer(std::string name) 
         : m_name(std::move(name)), m_start(std::chrono::steady_clock::now()) {}
 
+    explicit Timer() 
+        : m_name("This part "), m_start(std::chrono::steady_clock::now()) {
+            std::cout << "this part begin timing ! ";
+        }
+
     ~Timer() {
         auto end = std::chrono::steady_clock::now();
         // 使用 double 提高精度，避免 float 导致的微秒级精度丢失
