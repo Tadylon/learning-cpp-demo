@@ -8,9 +8,10 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(Main
-    key_words/exception.cpp
+    # key_words/exception.cpp
+    # template/ellipsis_in_t.cpp
+    async/chrono/ctime.cpp
 )
 
 target_include_directories(Main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-# 3. 明确告诉 CMake：这个目标(Target)需要编译并使用 C++20 的标准库模块

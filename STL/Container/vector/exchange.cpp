@@ -1,7 +1,8 @@
 #include <iostream>
-using namespace std;
-
 #include <vector>
+#include <iterator>
+
+using namespace std;
 
 // void printVector(vector<int>& v) {
 
