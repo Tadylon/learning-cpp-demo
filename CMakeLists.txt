@@ -10,7 +10,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(Main
     # key_words/exception.cpp
     # template/ellipsis_in_t.cpp
-    async/chrono/ctime.cpp
+    # async/chrono/ctime.cpp
+    # files/stringstream/istringstream.cpp
+    STL/stream/compare/to_string_with_format.cpp
 )
 
 target_include_directories(Main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
