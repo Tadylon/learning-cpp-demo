@@ -15,7 +15,8 @@ add_executable(Main
     # STL/stream/compare/to_string_with_format.cpp
     # class/enum_class.cpp
     # STL/Container/set/set_base.cpp
-    STL/Container/map/base_map.cpp
+    # STL/Container/map/base_map.cpp
+    STL/Container/map/init_map.cpp
 )
 
 target_include_directories(Main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
