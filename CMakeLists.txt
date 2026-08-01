@@ -12,7 +12,10 @@ add_executable(Main
     # template/ellipsis_in_t.cpp
     # async/chrono/ctime.cpp
     # files/stringstream/istringstream.cpp
-    STL/stream/compare/to_string_with_format.cpp
+    # STL/stream/compare/to_string_with_format.cpp
+    # class/enum_class.cpp
+    # STL/Container/set/set_base.cpp
+    STL/Container/map/base_map.cpp
 )
 
 target_include_directories(Main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)

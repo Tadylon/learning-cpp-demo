@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 #include <cstring>
 #include <cstdlib>
 
@@ -38,12 +37,12 @@ void buildClass(){
     Buffer b(test);
     Buffer* x = new Buffer(b);
     //print
-    cout << "this is b : " << b.data << "  " <<  b.size << endl;
-    cout << "this is a : " << x->data << "  " <<  x->size << endl;
+    std::cout << "this is b : " << b.data << "  " <<  b.size << std::endl;
+    std::cout << "this is a : " << x->data << "  " <<  x->size << std::endl;
     Buffer c = b;
 
     //print
-    cout << "this is c : " << c.data << "  " <<  c.size << endl;
+    std::cout << "this is c : " << c.data << "  " <<  c.size << std::endl;
 }
 
 int main(){

@@ -1,17 +1,17 @@
 #include <iostream>
 #include <Windows.h>
-using namespace std;
+// using namespace std;
 
 class Person {
 public:
 	//无参（默认）构造函数
 	Person() {
-		cout << "无参构造函数!" << endl;
+		std::cout << "Constructor without parameters" << std::endl;
 	}
 	//有参构造函数
 	Person(int age ,int height) {
 		
-		cout << "有参构造函数!" << endl;
+		std::cout << "Constructor with parameters " << std::endl;
 
 		m_age = age;
 		m_height = new int(height);
@@ -19,7 +19,7 @@ public:
 	}
 	//拷贝构造函数  
 	Person(const Person& p) {
-		cout << "拷贝构造函数!" << endl;
+		std::cout << "Copy Constructor" << std::endl;
 		//如果不利用深拷贝在堆区创建新内存，会导致浅拷贝带来的重复释放堆区问题
 		m_age = p.m_age;
 		m_height = new int(*p.m_height);
@@ -28,7 +28,7 @@ public:
 
 	//析构函数
 	~Person() {
-		cout << "析构函数!" << endl;
+		std::cout << "Destructor function" << std::endl;
 		if (m_height != NULL)
 		{
 			delete m_height;
@@ -45,9 +45,9 @@ void test01()
 
 	Person p2(p1);
 
-	cout << "p1的年龄： " << p1.m_age << " 身高： " << *p1.m_height << endl;
+	std::cout << "p1的年龄： " << p1.m_age << " 身高： " << *p1.m_height << std::endl;
 
-	cout << "p2的年龄： " << p2.m_age << " 身高： " << *p2.m_height << endl;
+	std::cout << "p2的年龄： " << p2.m_age << " 身高： " << *p2.m_height << std::endl;
 }
 
 int main() {
