@@ -2,7 +2,7 @@
 #include <iostream>
 #include <cstring>
 
-using namespace std;
+// using namespace std;
 
 // 声明一个结构体类型 Books 
 struct Books
@@ -19,28 +19,28 @@ int main( )
    Books Book2;        // 定义结构体类型 Books 的变量 Book2
 
    // Book1 详述
-    strcpy( Book1.title, "C++ 教程");
-    strcpy( Book1.author, "Runoob"); 
-    strcpy( Book1.subject, "编程语言");
+    std::strcpy( Book1.title, "C++ Toturial");
+    std::strcpy( Book1.author, "Runoob"); 
+    std::strcpy( Book1.subject, "Coding Languages");
     Book1.book_id = 12345;
 
    // Book2 详述
-    strcpy( Book2.title, "CSS 教程");
-    strcpy( Book2.author, "Runoob");
-    strcpy( Book2.subject, "前端技术");
+    std::strcpy( Book2.title, "CSS Toturial");
+    std::strcpy( Book2.author, "Runoob");
+    std::strcpy( Book2.subject, "Frontback Tech");
     Book2.book_id = 12346;
 
    // 输出 Book1 信息
-    cout << "第一本书标题 : " << Book1.title <<endl;
-    cout << "第一本书作者 : " << Book1.author <<endl;
-    cout << "第一本书类目 : " << Book1.subject <<endl;
-    cout << "第一本书 ID : " << Book1.book_id <<endl;
+    std::cout << "The name of the first book : " << Book1.title <<std::endl;
+    std::cout << "The author of the first book : " << Book1.author <<std::endl;
+    std::cout << "the subject of the first book : " << Book1.subject <<std::endl;
+    std::cout << "The ID of the first book : " << Book1.book_id <<std::endl;
 
     // 输出 Book2 信息
-    cout << "第二本书标题 : " << Book2.title <<endl;
-    cout << "第二本书作者 : " << Book2.author <<endl;
-    cout << "第二本书类目 : " << Book2.subject <<endl;
-    cout << "第二本书 ID : " << Book2.book_id <<endl;
+    std::cout << "The name of the second book : " << Book1.title <<std::endl;
+    std::cout << "The author of the second book : " << Book1.author <<std::endl;
+    std::cout << "the subject of the second book : " << Book1.subject <<std::endl;
+    std::cout << "The ID of the second book : " << Book1.book_id <<std::endl;
     
     return 0;
 }

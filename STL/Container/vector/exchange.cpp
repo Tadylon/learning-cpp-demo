@@ -38,7 +38,7 @@ void test01()
 	printVector(v2);
 
 	//互换容器
-	cout << "互换后" << endl;
+	cout << "After exchange : " << endl;
 	v1.swap(v2);
 	printVector(v1);
 	printVector(v2);
@@ -51,19 +51,19 @@ void test02()
 		v.push_back(i);
 	}
 
-	cout << "v的容量为：" << v.capacity() << endl;
-	cout << "v的大小为：" << v.size() << endl;
+	cout << "The container of v is : " << v.capacity() << endl;
+	cout << "The size of v is : " << v.size() << endl;
 
 	v.resize(3);
 
-	cout << "v的容量为：" << v.capacity() << endl;
-	cout << "v的大小为：" << v.size() << endl;
+	cout << "The container of v is : " << v.capacity() << endl;
+	cout << "The size of v is : " << v.size() << endl;
 
 	//收缩内存
 	vector<int>(v).swap(v); //匿名对象
 
-	cout << "v的容量为：" << v.capacity() << endl;
-	cout << "v的大小为：" << v.size() << endl;
+	cout << "The container of v is : " << v.capacity() << endl;
+	cout << "The size of v is : " << v.size() << endl;
 }
 
 int main() {

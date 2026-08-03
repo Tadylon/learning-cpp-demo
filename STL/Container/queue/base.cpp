@@ -1,24 +1,24 @@
 #include <iostream>
-using namespace std;
 #include <queue>
 #include <string>
+
 class Person
 {
 public:
-	Person(string name, int age)
+	Person(std::string name, int age)
 	{
 		this->m_Name = name;
 		this->m_Age = age;
 	}
 
-	string m_Name;
+	std::string m_Name;
 	int m_Age;
 };
 
 void test01() {
 
 	//创建队列
-	queue<Person> q;
+	std::queue<Person> q;
 
 	//准备数据
 	Person p1("master", 30);
@@ -35,18 +35,18 @@ void test01() {
 	//队列不提供迭代器，更不支持随机访问	
 	while (!q.empty()) {
 		//输出队头元素
-		cout << "element in queue head -- name :  " << q.front().m_Name 
-              << " age :  "<< q.front().m_Age << endl;
+		std::cout << "element in queue head -- name :  " << q.front().m_Name 
+                  << " age :  "<< q.front().m_Age << std::endl;
+
+		std::cout << "element in queue back -- name : " << q.back().m_Name  
+                  << " age " << q.back().m_Age << std::endl;
         
-		cout << "element in queue back -- name : " << q.back().m_Name  
-              << " age " << q.back().m_Age << endl;
-        
-		cout << endl;
+		std::cout << std::endl;
 		//弹出队头元素
 		q.pop();
 	}
 
-	cout << "the size of queue: " << q.size() << endl;
+	std::cout << "the size of queue: " << q.size() << std::endl;
 }
 
 int main() {

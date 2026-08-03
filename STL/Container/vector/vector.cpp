@@ -1,21 +1,18 @@
 #include <iostream>
-using namespace std;
-
-
 #include <vector>
 
-void printVector(vector<int>& v) {
+void printVector(std::vector<int>& v) {
 
-	for (vector<int>::iterator it = v.begin(); it != v.end(); it++) {
-		cout << *it << " ";
+	for (std::vector<int>::iterator it = v.begin(); it != v.end(); it++) {
+		std::cout<< *it << " ";
 	}
-	cout << endl;
+	std::cout<< std::endl;
 }
 
 //插入和删除
 void test01()
 {
-	vector<int> v1;
+	std::vector<int> v1;
 	//尾插
 	v1.push_back(10);
 	v1.push_back(20);
@@ -32,7 +29,7 @@ void test01()
 
 	v1.insert(v1.begin(), 2, 1000);
 	printVector(v1);
-	cout << v1.size() << endl;
+	std::cout<< v1.size() << std::endl;
 	
 	//删除
 	v1.erase(v1.begin());
