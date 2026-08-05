@@ -8,15 +8,9 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(Main
-    # key_words/exception.cpp
-    # template/ellipsis_in_t.cpp
-    # async/chrono/ctime.cpp
-    # files/stringstream/istringstream.cpp
-    # STL/stream/compare/to_string_with_format.cpp
-    # class/enum_class.cpp
-    # STL/Container/set/set_base.cpp
     # STL/Container/map/base_map.cpp
-    STL/Container/map/init_map.cpp
+    # STL/Container/map/init_map.cpp
+    function_oop/lambda/auto_lambda.cpp
 )
 
 target_include_directories(Main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)

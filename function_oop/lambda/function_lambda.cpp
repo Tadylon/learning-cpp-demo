@@ -7,8 +7,6 @@ auto sayHello = []() {
     std::cout << "Hello, Lambda!" << std::endl;
 };
 
-
-
 void ForEach(const std::vector<int>& values,const std::function<void(int)>& func) {
     for (int value : values) {
         func(value);
