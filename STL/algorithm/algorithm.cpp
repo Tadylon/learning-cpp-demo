@@ -23,9 +23,9 @@ int main() {
     if (it != numbers_test.end()) {
         cout << *it << endl; 
     } else {
-        cout << "没找到该数字" << endl;
+        cout << "Not found this number ! " << endl;
     }
-    cout << "索引位置" << distance(numbers_test.begin(), it) << endl;
+    cout << "the location of index is : " << distance(numbers_test.begin(), it) << endl;
     // Create a vector called numbers that will store integers
     vector<int> numbers = {1, 7, 3, 5, 9, 2};
 

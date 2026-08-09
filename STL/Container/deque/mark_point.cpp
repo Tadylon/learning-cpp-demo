@@ -1,17 +1,15 @@
 #include <iostream>
 #include <vector>
 #include <deque>
+#include <string>
 #include <algorithm>
 #include <cstdlib> // 对应 rand, srand
 #include <ctime>   // 对应 time
-
-using namespace std;
-
 //选手类
 class Person
 {
 public:
-	Person(string name, int score)
+	Person(std::string name, int score)
 	{
 		this->m_Name = name;
 		this->m_Score = score;
@@ -20,16 +18,16 @@ public:
 
     }
 
-	string m_Name; //姓名
+	std::string m_Name; //姓名
 	int m_Score;  //平均分
 };
 
-void createPerson(vector<Person> & v)
+void createPerson(std::vector<Person> & v)
 {
-	string nameSeed = "ABCDE";
+	std::string nameSeed = "ABCDE";
 	for (int i = 0; i < 5; i++)
 	{
-		string name = "player";
+		std::string name = "player";
 		name += nameSeed[i];
 
 		int score = 0;
@@ -42,24 +40,24 @@ void createPerson(vector<Person> & v)
 }
 
 //打分
-void setScore(vector<Person>&v)
+void setScore(std::vector<Person>&v)
 {
-	for (vector<Person>::iterator it = v.begin(); it != v.end(); it++)
+	for (std::vector<Person>::iterator it = v.begin(); it != v.end(); it++)
 	{
-		//将评委的分数 放入到deque容器中
-		deque<int>d;
+		//将评委的分数 放入到std::deque容器中
+		std::deque<int>d;
 		for (int i = 0; i < 10; i++)
 		{
 			int score = rand() % 41 + 60;  // 60 ~ 100
 			d.push_back(score);
 		}
 
-		// cout << "选手： " << it->m_Name << " 打分： " << endl;
-		// for (deque<int>::iterator dit = d.begin(); dit != d.end(); dit++)
+		// std::cout << "选手： " << it->m_Name << " 打分： " << std::endl;
+		// for (std::deque<int>::iterator dit = d.begin(); dit != d.end(); dit++)
 		// {
-		// 	cout << *dit << " ";
+		// 	std::cout << *dit << " ";
 		// }
-		// cout << endl;
+		// std::cout << std::endl;
 
 		//排序
 		sort(d.begin(), d.end());
@@ -70,7 +68,7 @@ void setScore(vector<Person>&v)
 
 		//取平均分
 		int sum = 0;
-		for (deque<int>::iterator dit = d.begin(); dit != d.end(); dit++)
+		for (std::deque<int>::iterator dit = d.begin(); dit != d.end(); dit++)
 		{
 			sum += *dit; //累加每个评委的分数
 		}
@@ -83,11 +81,11 @@ void setScore(vector<Person>&v)
 
 }
 
-void showScore(vector<Person>&v)
+void showScore(std::vector<Person>&v)
 {
-	for (vector<Person>::iterator it = v.begin(); it != v.end(); it++)
+	for (std::vector<Person>::iterator it = v.begin(); it != v.end(); it++)
 	{
-		cout << "name:  " << it->m_Name << " meaning score: " << it->m_Score << endl;
+		std::cout << "name:  " << it->m_Name << " meaning score: " << it->m_Score << std::endl;
 	}
 }
 
@@ -97,13 +95,13 @@ int main() {
 	srand((unsigned int)time(NULL));
 
 	//1、创建5名选手
-	vector<Person>v;  //存放选手容器
+	std::vector<Person>v;  //存放选手容器
 	createPerson(v);
 
 	//测试
-	//for (vector<Person>::iterator it = v.begin(); it != v.end(); it++)
+	//for (std::vector<Person>::iterator it = v.begin(); it != v.end(); it++)
 	//{
-	//	cout << "姓名： " << (*it).m_Name << " 分数： " << (*it).m_Score << endl;
+	//	std::cout << "姓名： " << (*it).m_Name << " 分数： " << (*it).m_Score << std::endl;
 	//}
 
 	//2、给5名选手打分

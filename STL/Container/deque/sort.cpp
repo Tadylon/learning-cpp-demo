@@ -1,22 +1,20 @@
 #include <iostream>
-using namespace std;
-
 #include <deque>
 #include <algorithm>
 
-void printDeque(const deque<int>& d) 
+void printDeque(const std::deque<int>& d) 
 {
-	for (deque<int>::const_iterator it = d.begin(); it != d.end(); it++) {
-		cout << *it << " ";
+	for (std::deque<int>::const_iterator it = d.begin(); it != d.end(); it++) {
+		std::cout << *it << " ";
 
 	}
-	cout << endl;
+	std::cout << std::endl;
 }
 
 void test01()
 {
 
-	deque<int> d;
+	std::deque<int> d;
 	d.push_back(10);
 	d.push_back(20);
 	d.push_front(100);
@@ -32,11 +30,8 @@ void test01()
 }
 
 int main() {
-
 	test01();
-
 	system("pause");
-
 	return 0;
 }
 

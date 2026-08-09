@@ -1,24 +1,22 @@
 #include <iostream>
-using namespace std;
-
 #include <vector>
 #include <string>
 
 //自定义数据类型
 class Person {
 public:
-	Person(string name, int age) {
+	Person(std::string name, int age) {
 		mName = name;
 		mAge = age;
 	}
 public:
-	string mName;
+	std::string mName;
 	int mAge;
 };
 //存放对象
 void test01() {
 
-	vector<Person> v;
+	std::vector<Person> v;
 
 	//创建数据
 	Person p1("aaa", 10);
@@ -33,8 +31,8 @@ void test01() {
 	v.push_back(p4);
 	v.push_back(p5);
 
-	for (vector<Person>::iterator it = v.begin(); it != v.end(); it++) {
-		cout << "Name:" << (*it).mName << " Age:" << (*it).mAge << endl;
+	for (std::vector<Person>::iterator it = v.begin(); it != v.end(); it++) {
+		std::cout << "Name:" << it->mName << " Age:" << (*it).mAge << std::endl;
 
 	}
 }
@@ -43,7 +41,7 @@ void test01() {
 //放对象指针
 void test02() {
 
-	vector<Person*> v;
+	std::vector<Person*> v;
 
 	//创建数据
 	Person p1("aaa", 10);
@@ -58,9 +56,9 @@ void test02() {
 	v.push_back(&p4);
 	v.push_back(&p5);
 
-	for (vector<Person*>::iterator it = v.begin(); it != v.end(); it++) {
+	for (std::vector<Person*>::iterator it = v.begin(); it != v.end(); it++) {
 		Person * p = (*it);
-		cout << "Name:" << p->mName << " Age:" << (*it)->mAge << endl;
+		std::cout << "Name:" << p->mName << " Age:" << (*it)->mAge << std::endl;
 	}
 }
 
@@ -70,8 +68,6 @@ int main() {
 	test01();
     
 	test02();
-
 	system("pause");
-
 	return 0;
 }

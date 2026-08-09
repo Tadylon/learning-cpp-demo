@@ -1,36 +1,33 @@
 #include <iostream>
 #include <vector>
 #include <iterator>
+// void printVector(std::vector<int>& v) {
 
-using namespace std;
-
-// void printVector(vector<int>& v) {
-
-// 	for (vector<int>::iterator it = v.begin(); it != v.end(); it++) {
-// 		cout << *it << " ";
+// 	for (std::vector<int>::iterator it = v.begin(); it != v.end(); it++) {
+// 		std::cout << *it << " ";
 // 	}
-// 	cout << endl;
+// 	std::cout << std::endl;
 // }
 
-void printVector(vector<int> & v){
-    for (vector<int>::iterator it = v.begin(); it != v.end(); it++) {
-        cout << *it << endl;
+void printVector(std::vector<int> & v){
+    for (std::vector<int>::iterator it = v.begin(); it != v.end(); it++) {
+        std::cout << *it << std::endl;
     }
-    cout << endl;
+    std::cout << std::endl;
 
 }
 
 
 void test01()
 {
-	vector<int>v1;
+	std::vector<int>v1;
 	for (int i = 0; i < 10; i++)
 	{
 		v1.push_back(i);
 	}
 	printVector(v1);
 
-	vector<int>v2;
+	std::vector<int>v2;
 	for (int i = 10; i > 0; i--)
 	{
 		v2.push_back(i);
@@ -38,7 +35,7 @@ void test01()
 	printVector(v2);
 
 	//互换容器
-	cout << "After exchange : " << endl;
+	std::cout << "After exchange : " << std::endl;
 	v1.swap(v2);
 	printVector(v1);
 	printVector(v2);
@@ -46,34 +43,30 @@ void test01()
 
 void test02()
 {
-	vector<int> v;
+	std::vector<int> v;
 	for (int i = 0; i < 100000; i++) {
 		v.push_back(i);
 	}
 
-	cout << "The container of v is : " << v.capacity() << endl;
-	cout << "The size of v is : " << v.size() << endl;
+	std::cout << "The container of v is : " << v.capacity() << std::endl;
+	std::cout << "The size of v is : " << v.size() << std::endl;
 
 	v.resize(3);
 
-	cout << "The container of v is : " << v.capacity() << endl;
-	cout << "The size of v is : " << v.size() << endl;
+	std::cout << "The container of v is : " << v.capacity() << std::endl;
+	std::cout << "The size of v is : " << v.size() << std::endl;
 
 	//收缩内存
-	vector<int>(v).swap(v); //匿名对象
+	std::vector<int>(v).swap(v); //匿名对象
 
-	cout << "The container of v is : " << v.capacity() << endl;
-	cout << "The size of v is : " << v.size() << endl;
+	std::cout << "The container of v is : " << v.capacity() << std::endl;
+	std::cout << "The size of v is : " << v.size() << std::endl;
 }
 
 int main() {
-
 	test01();
-
 	test02();
-
 	system("pause");
-
 	return 0;
 }
 

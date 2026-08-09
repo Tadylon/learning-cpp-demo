@@ -1,20 +1,19 @@
 #include <iostream>
-using namespace std;
 #include <deque>
 
-void printDeque(const deque<int>& d) 
+void printDeque(const std::deque<int>& d) 
 {
-	for (deque<int>::const_iterator it = d.begin(); it != d.end(); it++) {
-		cout << *it << "   ";
+	for (std::deque<int>::const_iterator it = d.begin(); it != d.end(); it++) {
+		std::cout << *it << "   ";
 
 	}
-	cout << endl;
+	std::cout << std::endl;
 }
 
 //大小操作
 void test01()
 {
-	deque<int> d1;
+	std::deque<int> d1;
 	for (int i = 0; i < 10; i++)
 	{
 		d1.push_back(i);
@@ -27,12 +26,12 @@ void test01()
 
 	//判断容器是否为空
 	if (d1.empty()) {
-		cout << "d1 is empty!" << endl;
+		std::cout << "d1 is empty!" << std::endl;
 	}
 	else {
-		cout << "d1 is not empty!" << endl;
+		std::cout << "d1 is not empty!" << std::endl;
 		//统计大小
-		cout << "d1 is large: " << d1.size() << endl;
+		std::cout << "d1 is large: " << d1.size() << std::endl;
 	}
 
 	//重新指定大小

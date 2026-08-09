@@ -10,7 +10,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(Main
     # STL/Container/map/base_map.cpp
     # STL/Container/map/init_map.cpp
-    function_oop/lambda/auto_lambda.cpp
+    # function_oop/lambda/auto_lambda.cpp
+    # STL/var_type/auto_type.cpp
+    # STL/Utility/tuple_pair/tuple_test.cpp
+    # STL/Utility/tuple_pair/pair_test.cpp
+    STL/Container/container/define.cpp
 )
 
 target_include_directories(Main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
