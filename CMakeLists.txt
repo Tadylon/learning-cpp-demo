@@ -8,7 +8,14 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(LearningCppDemo
-    key_words/constexpr.cpp
+    # key_words/constexpr.cpp
+    # linuxdir/cstd/getopt.cpp
+    # signal/jthread/produce_consumer_model.cpp
+    # STL/Utility/perfect_forward/learn_base.cpp
+    # STL/Utility/perfect_forward/example_1.cpp
+    # function_oop/main_para/base.cpp
+    # cstandard/copy/memcpy.cpp
+    cstandard/str/memorycopy.cpp
 )
 
 add_executable(cilent 
