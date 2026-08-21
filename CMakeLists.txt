@@ -15,7 +15,9 @@ add_executable(LearningCppDemo
     # STL/Utility/perfect_forward/example_1.cpp
     # function_oop/main_para/base.cpp
     # cstandard/copy/memcpy.cpp
-    cstandard/str/memorycopy.cpp
+    # cstandard/copy/memorycopy.cpp
+    # async/async_pro/template_async_future.cpp
+    thread/course/base.cpp
 )
 
 add_executable(cilent 
