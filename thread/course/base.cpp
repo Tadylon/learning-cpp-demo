@@ -1,14 +1,15 @@
 #if 1
-#define _CRT_SECURE_NO_WARNINGS
+// #define _CRT_SECURE_NO_WARNINGS
 #include<iostream>
 #include<thread>
 #include<chrono>
 #include<future>
 #include <exception>
+#include <stdexcept>
 
 int task(int number)
 {
-    throw std::exception("error ! ");
+    throw std::runtime_error("error ! ");
     std::this_thread::sleep_for(std::chrono::seconds(2));
     return 100 + number;
 }

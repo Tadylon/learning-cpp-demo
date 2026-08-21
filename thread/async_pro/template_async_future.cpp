@@ -3,6 +3,7 @@
 #include <future>
 #include <memory>
 #include <vector>
+#include <functional>
 
 int heavy_task(int n) {
     std::this_thread::sleep_for(std::chrono::milliseconds(10));

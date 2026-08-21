@@ -1,6 +1,7 @@
 #include <cassert>
 #include <array>
 #include <iostream>
+#include <vector>
 
 #include "print_obj.h"
 #include "standard_time.h"
