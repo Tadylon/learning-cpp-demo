@@ -16,7 +16,8 @@ add_executable(Main
     # STL/Utility/tuple_pair/pair_test.cpp
     # STL/Container/container/define.cpp
     # performance/cache/struct_cache_test.cpp
-    performance/cache/matrix_cache_test.cpp
+    # performance/cache/matrix_cache_test.cpp
+    error/stdexcept.cpp
 )
 
 target_include_directories(Main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)

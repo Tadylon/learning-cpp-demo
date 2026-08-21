@@ -12,7 +12,7 @@ public:
 class Derived : public Base
 {
 public:
-	inline void who()  // 不写inline时隐式内联
+	inline void who() override // 不写inline时隐式内联
 	{
 		cout << "I am Derived\n";
 	}

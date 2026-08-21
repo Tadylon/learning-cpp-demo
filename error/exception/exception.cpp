@@ -3,9 +3,12 @@
 
 struct MyException : public std::exception
 {
-    const char * what () const throw ()
+    //如果你现在写新代码，永远不要写 throw()，而是用 noexcept。
+    //const char* what() const throw()
+    const char* what() const noexcept override
     {
-        return "C++ Exception";
+        static const char* msg = "C++ Exception";
+        return msg;
     }
 };
 
