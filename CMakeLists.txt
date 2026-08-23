@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(Main
     # linuxdir/posix/pthread/pthread.cpp
-    zlib/zlib.cpp
+    # zlib/zlib.cpp
 
     # cstandard/head/io.cpp
     # cstandard/head/files/files.cpp
@@ -22,6 +22,7 @@ add_executable(Main
     # cstandard/head/clocale.cpp
     # cstandard/head/csetjmp.cpp
     # cstandard/head/cstdarg.cpp
+    key_words/explicit.cpp
 )
 
 # add_executable(cilent 
